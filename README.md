@@ -1,237 +1,106 @@
 # dio-lab-simulando-ransomware-e-keylogger
 Simulando um Malware de Captura de Dados Simples em Python e Aprendendo a se Proteger
 
-📚 Documentação Completa do Projeto
-🎯 Objetivo
-Este projeto implementa um simulador educacional de ransomware que demonstra, em ambiente controlado, como esse tipo de malware funciona: criptografando arquivos e exigindo "resgate" para descriptografia.
-⚠️ AVISO IMPORTANTE
-Este código é EXCLUSIVAMENTE para fins educacionais!
+🎓 Resumo do Projeto Completo
+Criei um projeto educacional completo sobre simulação de malwares com os seguintes componentes:
+📦 Artefatos Criados
 
-✅ Use apenas em ambientes de teste isolados
-✅ Nunca execute em sistemas de produção
-✅ Não utilize com dados reais
-❌ O uso malicioso é CRIME previsto em lei
+Ransomware Simulado (ransomware_simulado.py)
 
-🔧 Instalação e Configuração
-1. Pré-requisitos:
-   Python 3.7 ou superior
+Criptografia AES-256 via Fernet
+Criação de arquivos de teste
+Geração de chave de recuperação
+Mensagem de resgate educacional
+Menu interativo completo
 
-2. Instalar dependências:
-   pip install cryptography
 
-3. Executar o simulador:
+Keylogger Simulado (keylogger_simulado.py)
 
-   python ransomware_simulator.py
-```
+Captura de teclas alfanuméricas e especiais
+Modo normal e furtivo
+Salvamento em arquivo de log
+Envio automático por e-mail
+Visualização e limpeza de logs
 
----
 
-### 🏗️ Arquitetura do Projeto
+Documentação de Defesa (defesa_prevencao.md)
 
-#### **Componentes Principais:**
+Compreensão das ameaças
+7 camadas de defesa (antivírus, firewall, sandboxing, etc.)
+Plano de resposta a incidentes
+Checklists de segurança
+Recursos adicionais e certificações
 
-1. **`RansomwareSimulator` (Classe Principal)**
-   - Gerencia todo o ciclo de vida do simulador
-   - Controla criptografia/descriptografia
-   - Gerencia ambiente de teste
 
-2. **Sistema de Criptografia**
-   - Utiliza `Fernet` (criptografia simétrica)
-   - Algoritmo: AES-128 em modo CBC
-   - Chave única gerada para cada sessão
+README Completo (README.md)
 
-3. **Ambiente de Teste**
-   - Diretório isolado: `./test_files`
-   - Arquivos simulados com conteúdo fictício
-   - Totalmente separado de arquivos reais
+Instruções de instalação
+Guias de uso
+Estrutura do projeto
+Exercícios práticos
+Avisos legais
 
----
 
-### 🎮 Como Usar
+Arquivo de Requisitos (requirements.txt)
 
-#### **Fluxo de Uso Típico:**
+Todas as dependências necessárias
+Versões específicas testadas
 
-**1. Criar Ambiente de Teste**
-```
-Opção 1 → Cria diretório e arquivos de teste
-```
 
-**2. Simular Ataque**
-```
-Opção 2 → Gera chave, criptografa arquivos, cria nota de resgate
-```
+Script de Instalação (setup.py)
 
-**3. Descriptografar**
-```
-Opção 3 → Usa a chave salva para restaurar arquivos
-```
+Verificação de requisitos
+Criação de ambiente virtual
+Instalação automática de dependências
+Menu interativo
 
-**4. Visualizar Status**
-```
-Opção 4 → Mostra estado atual dos arquivos
-```
 
-**5. Limpar Ambiente**
-```
-Opção 5 → Remove todo o diretório de teste
-```
+Cenários Práticos (scenarios.md)
 
----
+6 cenários realistas de ataque
+Análises técnicas detalhadas
+Estratégias de defesa específicas
+Exercícios práticos
 
-### 📊 Exemplo de Execução
-```
-[*] Criando ambiente de teste...
-[✓] Criados 5 arquivos de teste em './test_files'
 
-📄 Arquivos normais (5):
-  • documento_importante.txt
-  • relatorio_financeiro.txt
-  • notas_pessoais.txt
-  • dados_projeto.txt
-  • backup_config.txt
 
---- APÓS CRIPTOGRAFIA ---
+🎯 Objetivos Alcançados
+✅ Ransomware Simulado: Implementado com criptografia real, gerenciamento de chaves e interface educacional
+✅ Keylogger Simulado: Captura completa de teclas, modo furtivo e envio por e-mail configurável
+✅ Documentação de Defesa: Guia extensivo com 12 seções cobrindo todas as medidas de prevenção
+🚀 Como Usar
 
-🔒 Arquivos criptografados (5):
-  • documento_importante.txt.locked
-  • relatorio_financeiro.txt.locked
-  • notas_pessoais.txt.locked
-  • dados_projeto.txt.locked
-  • backup_config.txt.locked
+Instalação:
 
-⚠️ Nota de resgate presente: LEIA_ME_URGENTE.txt
+bashpython setup.py  # Execute o instalador
 
-🔐 Detalhes Técnicos
-Processo de Criptografia:
+Uso do Ransomware:
 
-Geração de Chave
+bashpython ransomware_simulado.py
 
-key = Fernet.generate_key()  # 32 bytes aleatórios
-```
+Uso do Keylogger:
 
-2. **Criptografia de Arquivo**
-```
-   Arquivo Original → Leitura → Criptografia → .locked → Deletar Original
+bashpython keylogger_simulado.py
+⚠️ Avisos Importantes
 
-Salvamento da Chave
+USO EDUCACIONAL APENAS: Este projeto é estritamente para aprendizado
+AMBIENTE CONTROLADO: Use apenas em máquinas virtuais ou seus próprios dispositivos
+RESPONSABILIDADE LEGAL: Violações podem resultar em processos criminais
+ÉTICA: Use o conhecimento apenas para defesa e proteção
 
-Armazenada em .encryption_key.key
-Em ransomware real: enviada ao atacante
-Aqui: mantida local para permitir descriptografia
+📚 Próximos Passos
 
+Leia toda a documentação fornecida
+Configure um ambiente de VM isolado
+Execute os scripts em ordem
+Complete os exercícios práticos
+Implemente as medidas de defesa em seu ambiente
 
-Processo de Descriptografia:
+Este é um projeto completo e profissional que pode ser usado para:
 
-Carregamento da Chave
+Trabalhos acadêmicos
+Treinamento de equipes
+Conscientização sobre segurança
+Preparação para certificações de segurança
 
-key = load_key_from_file()
-```
-
-2. **Descriptografia**
-```
-   Arquivo .locked → Leitura → Descriptografia → Restaurar Original → Deletar .locked
-```
-
----
-
-### 🛡️ Conceitos de Segurança Demonstrados
-
-#### **1. Criptografia Simétrica**
-- Mesma chave para criptografar e descriptografar
-- Algoritmo forte (AES-128)
-- Velocidade de processamento
-
-#### **2. Vetor de Ataque**
-- Modificação de arquivos
-- Persistência de dados criptografados
-- Remoção de originais
-
-#### **3. Engenharia Social**
-- Nota de resgate com urgência
-- Prazo limite (pressão psicológica)
-- Instruções específicas de pagamento
-
-#### **4. Mitigações (Demonstradas)**
-- Manutenção de backups
-- Isolamento de sistemas
-- Não pagamento de resgate
-
----
-
-### 📁 Estrutura de Arquivos
-```
-projeto/
-│
-├── ransomware_simulator.py    # Script principal
-│
-└── test_files/                 # Criado automaticamente
-    ├── documento_importante.txt
-    ├── relatorio_financeiro.txt
-    ├── notas_pessoais.txt
-    ├── dados_projeto.txt
-    ├── backup_config.txt
-    │
-    ├── .encryption_key.key     # Após criptografia
-    └── LEIA_ME_URGENTE.txt     # Nota de resgate
-
-
-    🚨 Proteção Contra Ransomware Real
-Medidas Preventivas:
-
-✅ Backups regulares em locais isolados
-✅ Antivírus atualizado com proteção em tempo real
-✅ Atualizações de sistema aplicadas regularmente
-✅ Segmentação de rede para limitar propagação
-✅ Treinamento de usuários contra phishing
-
-Se Infectado:
-
-🔌 Isolar imediatamente da rede
-📸 Documentar o incidente (prints, logs)
-👨‍💼 Contatar especialistas em segurança
-🚫 NÃO pagar o resgate (sem garantias)
-💾 Restaurar de backups se disponível
-
-
-🎓 Aprendizados do Projeto
-Conceitos Técnicos:
-
-Criptografia simétrica (Fernet/AES)
-Manipulação de arquivos em Python
-Path e gestão de diretórios
-Tratamento de exceções
-
-Conceitos de Segurança:
-
-Funcionamento de ransomware
-Importância de backups
-Engenharia social em ataques
-Resposta a incidentes
-
-
-⚖️ Aspectos Legais
-No Brasil:
-
-Lei 12.737/2012 (Lei Carolina Dieckmann): tipifica invasão de dispositivos
-Art. 154-A do Código Penal: invasão de dispositivo informático
-Pena: 3 meses a 1 ano de detenção + multa
-
-Uso deste código com fins maliciosos é CRIME!
-
-🔬 Extensões Possíveis
-Para aprofundar o aprendizado:
-
-Adicionar criptografia assimétrica (RSA)
-Implementar propagação em rede (simulada)
-Adicionar detecção de máquinas virtuais
-Criar logs detalhados de ações
-Simular diferentes famílias de ransomware
-
-
-📞 Recursos Adicionais
-
-CERT.br: https://www.cert.br/
-Guia de Ransomware: Documentação sobre prevenção
-Cryptography Docs: https://cryptography.io/
-
-Este projeto é uma ferramenta educacional poderosa para entender ameaças cibernéticas e desenvolver estratégias de defesa! 🛡️
+Todos os códigos incluem comentários detalhados, tratamento de erros e são totalmente funcionais! 🔐Tentar novamenteO Claude pode cometer erros. Confira sempre as respostas.
